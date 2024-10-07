@@ -1,7 +1,17 @@
-# Import required libraries
-import tkinter as tk
+from flask import Flask, render_template
 
-# Establish GUI
-root = tk.Tk()
-root.title('Social Butterfly')
+# Create a Flask application instance
+app = Flask(__name__)
 
+# Define the home route
+@app.route('/')
+def home():
+    return "Hello, World!"
+
+# Define another route (optional)
+@app.route('/about')
+def about():
+    return "This is the About page!"
+
+if __name__ == '__main__':
+    app.run(debug=True)
