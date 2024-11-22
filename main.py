@@ -1,17 +1,19 @@
-from flask import Flask, render_template
+class event:
+    id = 
+    eventName = 
 
-# Create a Flask application instance
-app = Flask(__name__)
+class post:
+    id = 
+    platforms = 
+    associatedEvent = 
+    associatedEventType = 
+    postDate = 
+    postTime = 
 
-# Define the home route
-@app.route('/')
-def home():
-    return "Hello, World!"
+class twitterPost(post):
 
-# Define another route (optional)
-@app.route('/about')
-def about():
-    return "This is the About page!"
+class discordPost(post):
 
-if __name__ == '__main__':
-    app.run(debug=True)
+class linkedinPost(post):
+
+class email(post)
