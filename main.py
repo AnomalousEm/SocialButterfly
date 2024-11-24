@@ -1,19 +1,30 @@
-class event:
-    id = 
-    eventName = 
+# Social Butterfly
 
-class post:
-    id = 
-    platforms = 
-    associatedEvent = 
-    associatedEventType = 
-    postDate = 
-    postTime = 
+# Import require modules
+import sqlite3
 
-class twitterPost(post):
+# Connecting to sqlite
+# Connection object
+connection_obj = sqlite3.connect('issa.db')
 
-class discordPost(post):
+# Create cursor object
+cursor_obj = connection_obj.cursor()
 
-class linkedinPost(post):
+# Create the POST table if it doesn't already exist
+postTable = '''CREATE TABLE IF NOT EXISTS post (
+            id INTEGER PRIMARY KEY,
+            title TEXT
+            platform TEXT
+            associated_event TEXT
+            associated_event_type TEXT
+            post_date
+            post_time
+            )'''
 
-class email(post)
+cursor_obj.execute(postTable)
+result = cursor_obj.fetchall()
+print('SQLite Version is {}'.format(result))
+print("postTable is ready.")
+
+# Close the connection
+connection_obj.close()
