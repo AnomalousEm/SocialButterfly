@@ -9,3 +9,7 @@ SocialButterfly is a social media scheduling application with the goal of reduci
 - Eventbrite (IN PROGRESS)
 - Instagram (IN PROGRESS)
 
+# Install Requirements
+- Python
+- Evenbrite SDK [https://pypi.org/project/eventbrite/]
+- 
