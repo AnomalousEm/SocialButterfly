@@ -1,56 +1,56 @@
-# SOCIAL BUTTERFLY
-# Description: SocialButterfly is a social media scheduling application with the goal of reducing time to create and post content.
-# Author: Emily Shader
-# Date: 12/25/2024
+'''
+SOCIAL BUTTERFLY - Main
+Description: SocialButterfly is a social media scheduling application with the 
+goal of reducing time to create and post content.
+Author: Emily Shader
+Date: 12/25/2024
+'''
 
 # Import required modules
 import sqlite3
 import eventbrite
+import time
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
 
 
 # Define required methods
 
 # ISSA PORTAL DATA SCRAPER
+# Create instance of Chrome WebDriver
+service = Service(executable_path="chromedriver.exe")
+driver = webdriver.Chrome(service=service)
+
+# Navigate to ISSA Memeber Portal Login
+driver.get("https://www.members.issa.org/login.aspx")
+
+# Confirm title contains Python
+assert "Python" in driver.title
+
+input_element = driver.get_element(By.CLASS_NAME,"")
+
+# Sleep for 10 seconds
+time.sleep(10)
+
+# Close browser instance
+driver.quit()
 
 # EVENTBRITE
-def get_eventbrite_events():
-    '''
-    '''
-
-def add_eventbrite_subscriber_list():
-    '''
-    '''
-
-def schedule_eventbrite_email():
-    '''
-    '''
-
-
+# Get Events
+# Add subscriber list
+# Schedule email campaign
 
 # LINKEDIN COMPANY
-def post_linkedin():
-    '''
-    '''
-
-
+# Post
 
 # DISCORD
-def post_discord():
-    '''
-    '''
-
-
+# Post
 
 # TWITTER/X
-def post_twitter():
-    '''
-    '''
-
-
+# Post
 # INSTAGRAM
-def post_instagram():
-    '''
-    '''
+# Post
 
 
 # Application startup actions

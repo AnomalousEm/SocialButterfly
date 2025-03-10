@@ -1,7 +1,11 @@
-# SOCIAL BUTTERFLY
-# Description: SocialButterfly is a social media scheduling application with the goal of reducing time to create and post content.
-# Author: Emily Shader
-# Date: 12/25/2024
+'''
+SOCIAL BUTTERFLY - DB
+Description: SocialButterfly is a social media scheduling application with the 
+goal of reducing time to create and post content. This file is responsible for
+spinning up required database and tables for the application.
+Author: Emily Shader
+Date: 12/25/2024
+'''
 
 # Import required modules
 import sqlite3
@@ -14,6 +18,19 @@ cursor_obj = connection_obj.cursor()
 
 result = cursor_obj.fetchall()
 print('SQLite Version is {}'.format(result))
+
+# MEMBER
+# Create the member table if it doesn't already exist
+memberTable = '''CREATE TABLE IF NOT EXISTS member (
+            memberid INTEGER PRIMARY KEY,
+            memberfirstname TEXT
+            memberlastname TEXT 
+            memberemail TEXT
+            memberphone
+            )'''
+
+cursor_obj.execute(communicationsTable)
+print("communicationsTable is ready.")
 
 # COMMUNICATIONS
 # Create the communications table if it doesn't already exist
