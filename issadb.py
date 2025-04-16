@@ -29,7 +29,7 @@ memberTable = '''CREATE TABLE IF NOT EXISTS member (
             memberphone
             )'''
 
-cursor_obj.execute(communicationsTable)
+cursor_obj.execute(memberTable)
 print("communicationsTable is ready.")
 
 # COMMUNICATIONS

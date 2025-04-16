@@ -15,9 +15,10 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
 
-# Define required methods
+# Information Gathering
 
 # ISSA PORTAL DATA SCRAPER
+
 # Create instance of Chrome WebDriver
 service = Service(executable_path="chromedriver.exe")
 driver = webdriver.Chrome(service=service)
@@ -38,7 +39,6 @@ driver.quit()
 
 # EVENTBRITE
 # Get Events
-# Add subscriber list
 # Schedule email campaign
 
 # LINKEDIN COMPANY
