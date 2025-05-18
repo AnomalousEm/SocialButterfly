@@ -7,12 +7,10 @@ Date: 12/25/2024
 '''
 
 # Import required modules
-import sqlite3
-import eventbrite
-import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+import time
 
 
 # Information Gathering
@@ -20,19 +18,23 @@ from selenium.webdriver.common.by import By
 # ISSA PORTAL DATA SCRAPER
 
 # Create instance of Chrome WebDriver
-service = Service(executable_path="chromedriver.exe")
-driver = webdriver.Chrome(service=service)
+driver = webdriver.Chrome()
 
 # Navigate to ISSA Memeber Portal Login
 driver.get("https://www.members.issa.org/login.aspx")
 
-# Confirm title contains Python
-assert "Python" in driver.title
+# Give time to load
+time.sleep(5)
 
-input_element = driver.get_element(By.CLASS_NAME,"")
+# Find and fill username/password
+username_field = driver.find_element(By.NAME, "u")  # or ID/XPATH/CSS_SELECTOR
+password_field = driver.find_element(By.NAME, "p")
 
-# Sleep for 10 seconds
-time.sleep(10)
+username_field.send_keys("test")
+password_field.send_keys("yrobot1234")
+
+# output the full-page HTML
+print(driver.page_source)
 
 # Close browser instance
 driver.quit()
